@@ -18,10 +18,10 @@ public class Product {
 	@GeneratedValue
 	private Long id;
 	
-	@Column
+	@Column(nullable = false)
 	private String code;
 	
-	@Column
+	@Column(nullable = false)
 	private String label;
 	
 	@Enumerated(EnumType.STRING)

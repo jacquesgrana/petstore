@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 @Entity
 public class Cat extends Animal {
 	
-	@Column
+	@Column(nullable = false)
 	private String chipId;
 
 	public Cat() {

@@ -59,7 +59,7 @@ public class App
     	em.persist(product2);
     	em.persist(product3);
     	
-    	PetStore petStore1 = new PetStore("Good Hope Center", "H. Simpson", adress1);
+    	PetStore petStore1 = new PetStore("Good Hope Center", "L. Simpson", adress1);
     	PetStore petStore2 = new PetStore("Tesla Kitten and Fish Shelter", "E. Musk", adress3);
     	PetStore petStore3 = new PetStore("America First Animal Fundation", "D. Trump Jr.", adress2);
     	

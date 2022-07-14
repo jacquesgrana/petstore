@@ -16,13 +16,13 @@ public class Adress {
 	@Column
 	private String number;
 	
-	@Column
+	@Column(nullable = false)
 	private String street;
 	
-	@Column
+	@Column(nullable = false)
 	private String zipCode;
 	
-	@Column
+	@Column(nullable = false)
 	private String city;
 	
 	@OneToOne

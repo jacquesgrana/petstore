@@ -18,10 +18,10 @@ public abstract class Animal {
 	@GeneratedValue
 	private Long id;
 	
-	@Column
+	@Column(nullable = false)
 	private LocalDate birth;
 	
-	@Column
+	@Column(nullable = false)
 	private String color;
 	
 	@ManyToOne

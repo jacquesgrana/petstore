@@ -20,10 +20,10 @@ public class PetStore {
 	@GeneratedValue
 	private Long id;
 	
-	@Column
+	@Column(nullable = false)
 	private String name;
 	
-	@Column
+	@Column(nullable = false)
 	private String managerName;
 	
 	@OneToOne

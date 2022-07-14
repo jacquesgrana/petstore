@@ -9,7 +9,7 @@ import javax.persistence.Enumerated;
 @Entity
 public class Fish extends Animal {
 	
-	@Enumerated(EnumType.ORDINAL)
+	@Enumerated(EnumType.STRING)
 	private FishLivEnv livingEnv;
 
 	public Fish() {}

@@ -24,7 +24,7 @@ public class Product {
 	@Column
 	private String label;
 	
-	@Enumerated(EnumType.ORDINAL)
+	@Enumerated(EnumType.STRING)
 	private ProdType type;
 	
 	@Column

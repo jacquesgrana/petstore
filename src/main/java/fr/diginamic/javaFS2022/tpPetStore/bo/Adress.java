@@ -6,8 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-import fr.diginamic.javaFS2022.tpPetStore.bo.PetStore;
-
 @Entity
 public class Adress {
 	
@@ -161,8 +159,6 @@ public class Adress {
 		builder.append(zipCode);
 		builder.append(", city=");
 		builder.append(city);
-		builder.append(", petStore=");
-		builder.append(petStore);
 		builder.append("]");
 		return builder.toString();
 	}

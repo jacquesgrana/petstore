@@ -151,8 +151,12 @@ public class Product {
 	}
 
 	public void addPetStore(PetStore petStore) {
-		this.petStores.add(petStore);
-		petStore.getProducts().add(this);
+		if (!this.petStores.contains(petStore)) {
+			this.petStores.add(petStore);
+		}
+		if (!petStore.getProducts().contains(this)) {
+			petStore.getProducts().add(this);
+		}
 	}
 
 }

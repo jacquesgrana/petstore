@@ -63,6 +63,7 @@ public class App
     	PetStore petStore2 = new PetStore("Tesla Kitten and Fish Shelter", "E. Musk", adress3);
     	PetStore petStore3 = new PetStore("America First Animal Fundation", "D. Trump Jr.", adress2);
     	
+    	/*
     	petStore1.getAnimals().add(fish1);
     	petStore1.getAnimals().add(fish2);
     	
@@ -72,6 +73,19 @@ public class App
     	petStore3.getAnimals().add(cat2);
     	petStore3.getAnimals().add(cat3);
     	
+    	*/
+    	
+    	petStore1.addAnimal(fish1);
+    	petStore1.addAnimal(fish2);
+    	
+    	petStore2.addAnimal(fish3);
+    	petStore2.addAnimal(cat1);
+    	
+    	petStore3.addAnimal(cat2);
+    	petStore3.addAnimal(cat3);
+    	
+    	
+    	/*
     	petStore1.getProducts().add(product1);
     	petStore1.getProducts().add(product2);
     	petStore1.getProducts().add(product3);
@@ -81,6 +95,18 @@ public class App
     	
     	petStore3.getProducts().add(product2);
     	petStore3.getProducts().add(product3);
+    	*/
+    	
+    	petStore1.addProduct(product1);
+    	petStore1.addProduct(product2);
+    	petStore1.addProduct(product3);
+    	
+    	petStore2.addProduct(product1);
+    	petStore2.addProduct(product2);
+    	
+    	petStore3.addProduct(product2);
+    	petStore3.addProduct(product3);
+    	
     	
     	em.persist(petStore1);
     	em.persist(petStore2);

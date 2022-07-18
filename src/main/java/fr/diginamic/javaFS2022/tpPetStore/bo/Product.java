@@ -150,4 +150,9 @@ public class Product {
 		return builder.toString();
 	}
 
+	public void addPetStore(PetStore petStore) {
+		this.petStores.add(petStore);
+		petStore.getProducts().add(this);
+	}
+
 }

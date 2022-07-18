@@ -111,4 +111,14 @@ public abstract class Animal {
 		return builder.toString();
 	}
 
+	public void addPetStore(PetStore petStore) {
+		if (null != this.petStore) {
+			petStore.getAnimals().remove(this);
+		}
+		this.petStore = petStore;
+		if (null != this.petStore) {
+			petStore.getAnimals().add(this);
+		}
+	}
+
 }

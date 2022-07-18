@@ -3,6 +3,7 @@ package fr.diginamic.javaFS2022.tpPetStore.bo;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,7 +30,7 @@ public class PetStore {
 	@OneToOne
 	private Adress adress;
 	
-	@OneToMany(mappedBy = "petStore")
+	@OneToMany(mappedBy = "petStore", cascade = CascadeType.PERSIST)
 	private Set<Animal> animals = new HashSet<>();
 	
 	@ManyToMany
@@ -59,6 +60,14 @@ public class PetStore {
 		this.name = name;
 		this.managerName = managerName;
 		this.adress = adress;
+	}
+	
+	public void addAnimal (Animal animal) {
+		animal.addPetStore(this);
+	}
+	
+	public void addProduct (Product product) {
+		product.addPetStore(this);
 	}
 
 	/**

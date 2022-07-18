@@ -121,4 +121,9 @@ public abstract class Animal {
 		}
 	}
 
+	public void removePetStore(PetStore petStore) {
+		petStore.getAnimals().remove(this);
+		this.petStore = null;
+	}
+
 }

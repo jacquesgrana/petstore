@@ -66,8 +66,16 @@ public class PetStore {
 		animal.addPetStore(this);
 	}
 	
+	public void removeAnimal (Animal animal) {
+		animal.removePetStore(this);
+	}
+	
 	public void addProduct (Product product) {
 		product.addPetStore(this);
+	}
+	
+	public void removeProduct(Product product) {
+		product.removePetStore(this);
 	}
 
 	/**

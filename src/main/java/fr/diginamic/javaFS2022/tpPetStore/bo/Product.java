@@ -48,6 +48,24 @@ public class Product {
 		this.type = type;
 		this.price = price;
 	}
+	
+	public void addPetStore(PetStore petStore) {
+		if (!this.petStores.contains(petStore)) {
+			this.petStores.add(petStore);
+		}
+		if (!petStore.getProducts().contains(this)) {
+			petStore.getProducts().add(this);
+		}
+	}
+	
+	public void removePetStore(PetStore petStore) {
+		if (this.petStores.contains(petStore)) {
+			this.petStores.remove(petStore);
+		}
+		if (petStore.getProducts().contains(this)) {
+			petStore.getProducts().remove(this);
+		}
+	}
 
 	/**
 	 * @return the id
@@ -148,15 +166,6 @@ public class Product {
 		builder.append(price);
 		builder.append("]");
 		return builder.toString();
-	}
-
-	public void addPetStore(PetStore petStore) {
-		if (!this.petStores.contains(petStore)) {
-			this.petStores.add(petStore);
-		}
-		if (!petStore.getProducts().contains(this)) {
-			petStore.getProducts().add(this);
-		}
 	}
 
 }
